@@ -20,7 +20,6 @@ Este proyecto es una aplicación **NestJS** que utiliza **Prisma** como ORM para
 ## Instalación
 
 1. Clona este repositorio:
-
   ```bash
   git clone https://github.com/tu-usuario/proyecto-nest-prisma.git
   cd proyecto-nest-prisma
@@ -29,8 +28,18 @@ Este proyecto es una aplicación **NestJS** que utiliza **Prisma** como ORM para
   ```bash
     pnpm install
 
-3. Crea el archivo .env en la raíz del proyecto con la URL de tu base de datos PostgreSQL:
+3. Crea el archivo .env en la raíz del proyecto con la URL de tu base de datos PostgreSQL: (**Reemplaza usuario, contraseña, y nombre_base_de_datos con los valores correspondientes.)
   ```bash
   DATABASE_URL="postgresql://usuario:contraseña@localhost:5432/nombre_base_de_datos?schema=public"
-**Reemplaza usuario, contraseña, y nombre_base_de_datos con los valores correspondientes.
 
+4. Ejecuta las migraciones de Prisma para crear la tabla de usuarios:
+  ```bash
+  npx prisma migrate dev --name init
+
+5. Genera el cliente de Prisma:
+  ```bash
+  npx prisma generate
+
+## Iniciar el servidor
+  ```bash
+  pnpm run start:dev
