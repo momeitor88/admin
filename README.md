@@ -37,15 +37,15 @@ Este proyecto es una aplicación **NestJS** que utiliza **Prisma** como ORM para
 
 4. Ejecuta las migraciones de Prisma para crear la tabla de usuarios:
 
-  ```bash
-  npx prisma migrate dev --name init
+   ```bash
+   npx prisma migrate dev --name init
 
 5. Genera el cliente de Prisma:
 
-  ```bash
-  npx prisma generate
+   ```bash
+   npx prisma generate
 
 ## Iniciar el servidor
 
-  ```bash
-  pnpm run start:dev
+   ```bash
+   pnpm run start:dev
